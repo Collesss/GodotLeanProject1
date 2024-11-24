@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://0vrww5u6ab22"]
+
+[ext_resource type="PackedScene" uid="uid://b28ecndl0g31n" path="res://Scenes/PlayerArea2d.tscn" id="1_8b31x"]
+[ext_resource type="Script" path="res://Scripts/MainNode.cs" id="1_vtsop"]
+[ext_resource type="PackedScene" uid="uid://cemq47yl8blha" path="res://Scenes/EnemyRigidBody2D.tscn" id="2_4m5nl"]
+[ext_resource type="PackedScene" uid="uid://vxxg2j8ox3b8" path="res://Scenes/HUDCanvasLayer.tscn" id="4_4sdbo"]
+
+[sub_resource type="Curve2D" id="Curve2D_tohug"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 480, 720, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[node name="MainNode" type="Node"]
+script = ExtResource("1_vtsop")
+Enemy = ExtResource("2_4m5nl")
+
+[node name="PlayerArea2D" parent="." instance=ExtResource("1_8b31x")]
+
+[node name="TimersNode" type="Node" parent="."]
+
+[node name="EnemyTimer" type="Timer" parent="TimersNode"]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="TimersNode"]
+
+[node name="StartTimer" type="Timer" parent="TimersNode"]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPlayerPositionMarker2D" type="Marker2D" parent="."]
+position = Vector2(240, 450)
+
+[node name="EnemyPath2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_tohug")
+
+[node name="EnemySpawnPathFollow2D" type="PathFollow2D" parent="EnemyPath2D"]
+
+[node name="HUDCanvasLayer" parent="." instance=ExtResource("4_4sdbo")]
+
+[connection signal="GameEnd" from="." to="HUDCanvasLayer" method="ShowGameOver"]
+[connection signal="ScoreUpdate" from="." to="HUDCanvasLayer" method="UpdateScore"]
+[connection signal="Hit" from="PlayerArea2D" to="." method="GameOver"]
+[connection signal="timeout" from="TimersNode/EnemyTimer" to="." method="OnEnemyTimerTimeout"]
+[connection signal="timeout" from="TimersNode/ScoreTimer" to="." method="OnScoreTimerTimeout"]
+[connection signal="timeout" from="TimersNode/StartTimer" to="." method="OnStartTimerTimeout"]
+[connection signal="StartGame" from="HUDCanvasLayer" to="." method="StartGame"]
