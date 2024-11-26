@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://vxxg2j8ox3b8"]
+[gd_scene load_steps=5 format=3 uid="uid://vxxg2j8ox3b8"]
 
 [ext_resource type="Theme" uid="uid://uebnnc82fi1r" path="res://Themes/DefaultTheme.tres" id="1_cpqbw"]
 [ext_resource type="Script" path="res://Scripts/HudCanvasLayer.cs" id="1_i4ma3"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_6clpo"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_6whw6"]
+events = [SubResource("InputEventAction_6clpo")]
 
 [node name="HUDCanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_i4ma3")
@@ -50,6 +56,7 @@ offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_cpqbw")
+shortcut = SubResource("Shortcut_6whw6")
 text = "Start"
 
 [node name="MessageTimer" type="Timer" parent="."]
