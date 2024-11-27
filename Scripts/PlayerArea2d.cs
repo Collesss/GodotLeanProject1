@@ -36,7 +36,7 @@ public partial class PlayerArea2d : Area2D
 		Vector2 move = GetMove();
 
         Position = GetNewPosition(move);
-
+        
 
         if (move.LengthSquared() != 0)
             _animatedSprite2D.Play();
@@ -78,16 +78,5 @@ public partial class PlayerArea2d : Area2D
 
 
 	private Vector2 GetMove() =>
-        GetStick().Normalized() * Speed * (float)GetProcessDeltaTime();
-
-
-	private Vector2 GetStick() =>
-		new Vector2(GetAxisHor(), GetAxisVer());
-
-    private float GetAxisHor() =>
-		Input.GetAxis("move_left", "move_right");
-
-    private float GetAxisVer() =>
-        Input.GetAxis("move_up", "move_down");
-
+        Input.GetVector("move_left", "move_right", "move_up", "move_down").Normalized() * Speed * (float)GetProcessDeltaTime();
 }

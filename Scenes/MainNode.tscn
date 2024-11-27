@@ -64,14 +64,14 @@ stream = SubResource("AudioStreamOggVorbis_01qqu")
 [node name="DeathSoundAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="SoundsNode"]
 stream = ExtResource("5_1t6rj")
 
+[connection signal="GameEnd" from="." to="HUDCanvasLayer" method="ShowGameOver"]
 [connection signal="GameEnd" from="." to="TimersNode/EnemyTimer" method="stop"]
 [connection signal="GameEnd" from="." to="TimersNode/ScoreTimer" method="stop"]
-[connection signal="GameEnd" from="." to="HUDCanvasLayer" method="ShowGameOver"]
 [connection signal="GameEnd" from="." to="SoundsNode/MusicAudioStreamPlayer2D" method="stop"]
 [connection signal="GameEnd" from="." to="SoundsNode/DeathSoundAudioStreamPlayer2D" method="play"]
+[connection signal="GameStarting" from="." to="HUDCanvasLayer" method="ShowReadyMessage"]
 [connection signal="GameStarting" from="." to="TimersNode/StartTimer" method="start"]
 [connection signal="GameStarting" from="." to="SoundsNode/MusicAudioStreamPlayer2D" method="play"]
-[connection signal="GameStarting" from="." to="HUDCanvasLayer" method="ShowMessage" binds= ["Get Ready!"]]
 [connection signal="ScoreUpdate" from="." to="HUDCanvasLayer" method="UpdateScore"]
 [connection signal="Hit" from="PlayerArea2D" to="." method="GameOver"]
 [connection signal="StartGame" from="HUDCanvasLayer" to="." method="StartGame"]

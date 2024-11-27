@@ -59,9 +59,27 @@ theme = ExtResource("1_cpqbw")
 shortcut = SubResource("Shortcut_6whw6")
 text = "Start"
 
-[node name="MessageTimer" type="Timer" parent="."]
+[node name="TimersNode" type="Node" parent="."]
+
+[node name="MessageReadyHideTimer" type="Timer" parent="TimersNode"]
 wait_time = 2.0
 one_shot = true
 
+[node name="ButtonShowTimer" type="Timer" parent="TimersNode"]
+
+[node name="MessageDeathTimer" type="Timer" parent="TimersNode"]
+wait_time = 2.0
+
+[connection signal="ShowGamingOverMessage" from="." to="MessageLabel" method="show"]
+[connection signal="ShowGamingOverMessage" from="." to="TimersNode/MessageDeathTimer" method="start"]
+[connection signal="ShowGamingOverMessage" from="." to="MessageLabel" method="set_text" binds= ["Game Over"]]
+[connection signal="ShowReadingMessage" from="." to="MessageLabel" method="show"]
+[connection signal="ShowReadingMessage" from="." to="TimersNode/MessageReadyHideTimer" method="start"]
+[connection signal="ShowReadingMessage" from="." to="MessageLabel" method="set_text" binds= ["Get Ready!"]]
+[connection signal="StartGame" from="." to="MessageLabel" method="hide"]
+[connection signal="StartGame" from="." to="StartButton" method="hide"]
 [connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
-[connection signal="timeout" from="MessageTimer" to="." method="OnMessageTimerTimeout"]
+[connection signal="timeout" from="TimersNode/MessageReadyHideTimer" to="MessageLabel" method="hide"]
+[connection signal="timeout" from="TimersNode/ButtonShowTimer" to="StartButton" method="show"]
+[connection signal="timeout" from="TimersNode/MessageDeathTimer" to="TimersNode/ButtonShowTimer" method="start"]
+[connection signal="timeout" from="TimersNode/MessageDeathTimer" to="MessageLabel" method="set_text" binds= ["Dodge the Creeps!"]]

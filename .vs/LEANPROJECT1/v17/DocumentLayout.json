@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|c:\\users\\lesikov\\documents\\godotprojects\\leanproject1\\scripts\\hudcanvaslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|solutionrelative:scripts\\hudcanvaslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|c:\\users\\lesikov\\documents\\godotprojects\\leanproject1\\scripts\\mainnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|solutionrelative:scripts\\mainnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,22 +28,9 @@
               "RelativeDocumentMoniker": "Scripts\\HudCanvasLayer.cs",
               "ToolTip": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\HudCanvasLayer.cs",
               "RelativeToolTip": "Scripts\\HudCanvasLayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T12:55:28.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainNode.cs",
-              "DocumentMoniker": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\MainNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\MainNode.cs",
-              "ToolTip": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\MainNode.cs",
-              "RelativeToolTip": "Scripts\\MainNode.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T08:00:14.792Z",
               "EditorCaption": ""
             }
           ]
