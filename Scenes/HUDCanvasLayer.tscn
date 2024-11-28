@@ -66,10 +66,13 @@ wait_time = 2.0
 one_shot = true
 
 [node name="ButtonShowTimer" type="Timer" parent="TimersNode"]
+one_shot = true
 
 [node name="MessageDeathTimer" type="Timer" parent="TimersNode"]
 wait_time = 2.0
+one_shot = true
 
+[connection signal="ScoreUpdateing" from="." to="ScoreLabel" method="set_text"]
 [connection signal="ShowGamingOverMessage" from="." to="MessageLabel" method="show"]
 [connection signal="ShowGamingOverMessage" from="." to="TimersNode/MessageDeathTimer" method="start"]
 [connection signal="ShowGamingOverMessage" from="." to="MessageLabel" method="set_text" binds= ["Game Over"]]

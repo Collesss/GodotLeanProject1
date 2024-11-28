@@ -9,9 +9,4 @@ public partial class EnemyRigidBody2D : RigidBody2D
 		string[] animNames = animatedSprite2D.SpriteFrames.GetAnimationNames();
 		animatedSprite2D.Play(animNames[GD.RandRange(0, animNames.Length - 1)]);
     }
-
-	public void OnVisibleOnScreenNotifier2DScreenExited()
-	{
-		QueueFree();
-	}
 }
