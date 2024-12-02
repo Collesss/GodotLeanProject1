@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|solutionrelative:scripts\\mainnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|c:\\users\\lesikov\\documents\\godotprojects\\leanproject1\\scripts\\enemyrigidbody2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|solutionrelative:scripts\\enemyrigidbody2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|c:\\users\\lesikov\\documents\\godotprojects\\leanproject1\\scripts\\hudcanvaslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|solutionrelative:scripts\\hudcanvaslayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|c:\\users\\lesikov\\documents\\godotprojects\\leanproject1\\scripts\\playerarea2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0B7F370-AB20-49D7-85BB-5DF80EE273F5}|LeanProject1.csproj|solutionrelative:scripts\\playerarea2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerArea2d.cs",
+              "DocumentMoniker": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\PlayerArea2d.cs",
+              "RelativeDocumentMoniker": "Scripts\\PlayerArea2d.cs",
+              "ToolTip": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\PlayerArea2d.cs",
+              "RelativeToolTip": "Scripts\\PlayerArea2d.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAwwEUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T09:48:17.064Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -36,35 +49,22 @@
               "RelativeDocumentMoniker": "Scripts\\MainNode.cs",
               "ToolTip": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\MainNode.cs",
               "RelativeToolTip": "Scripts\\MainNode.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowDkAAAAFAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowDoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T08:00:27.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HudCanvasLayer.cs",
               "DocumentMoniker": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\HudCanvasLayer.cs",
               "RelativeDocumentMoniker": "Scripts\\HudCanvasLayer.cs",
               "ToolTip": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\HudCanvasLayer.cs",
               "RelativeToolTip": "Scripts\\HudCanvasLayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T07:48:36.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EnemyRigidBody2D.cs",
-              "DocumentMoniker": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\EnemyRigidBody2D.cs",
-              "RelativeDocumentMoniker": "Scripts\\EnemyRigidBody2D.cs",
-              "ToolTip": "C:\\Users\\lesikov\\Documents\\GodotProjects\\LeanProject1\\Scripts\\EnemyRigidBody2D.cs",
-              "RelativeToolTip": "Scripts\\EnemyRigidBody2D.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T07:09:03.297Z",
               "EditorCaption": ""
             }
           ]

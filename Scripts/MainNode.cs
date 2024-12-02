@@ -6,10 +6,10 @@ public partial class MainNode : Node
     public delegate void ScoreUpdateEventHandler(int newScore);
 
     [Signal]
-    public delegate void GameEndEventHandler();
+    public delegate void GameOverEventHandler();
 
     [Signal]
-    public delegate void GameStartingEventHandler();
+    public delegate void GameStartEventHandler();
 
 
     [Export]
@@ -43,10 +43,10 @@ public partial class MainNode : Node
     }
 
 
-    public void GameOver() =>
-        EmitSignal(SignalName.GameEnd);
+    public void GameOverEmit() =>
+        EmitSignal(SignalName.GameOver);
 
-    public void StartGame()
+    public void StartGameEmit()
     {
         Score = 0;
 
@@ -54,7 +54,7 @@ public partial class MainNode : Node
 
         GetTree().CallGroup("Enemies", Node.MethodName.QueueFree);
 
-        EmitSignal(SignalName.GameStarting);
+        EmitSignal(SignalName.GameStart);
     }
 
     public void OnScoreTimerTimeout() =>

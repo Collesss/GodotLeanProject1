@@ -6,23 +6,23 @@ public partial class HudCanvasLayer : CanvasLayer
 	public delegate void StartGameEventHandler();
 
 	[Signal]
-	public delegate void ShowReadingMessageEventHandler();
+	public delegate void ShowReadyMessageEventHandler();
 
     [Signal]
-    public delegate void ShowGamingOverMessageEventHandler();
+    public delegate void ShowGameOverMessageEventHandler();
 
 	[Signal]
-	public delegate void ScoreUpdateingEventHandler(string newScore);
+	public delegate void ScoreUpdateEventHandler(string newScore);
 
 
-	public void ShowReadyMessage() =>
-		EmitSignal(SignalName.ShowReadingMessage);
+	public void ShowReadyMessageEmit() =>
+		EmitSignal(SignalName.ShowReadyMessage);
 
-	public void ShowGameOver() =>
-		EmitSignal(SignalName.ShowGamingOverMessage);
+	public void ShowGameOverEmit() =>
+		EmitSignal(SignalName.ShowGameOverMessage);
 
-	public void UpdateScore(int score) =>
-		EmitSignal(SignalName.ScoreUpdateing, score.ToString());
+	public void UpdateScoreEmit(int score) =>
+		EmitSignal(SignalName.ScoreUpdate, score.ToString());
 
 	public void OnStartButtonPressed() =>
 		EmitSignal(SignalName.StartGame);

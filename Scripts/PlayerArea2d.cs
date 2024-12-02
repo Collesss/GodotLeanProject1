@@ -19,6 +19,8 @@ public partial class PlayerArea2d : Area2D
 	private AnimatedSprite2D _animatedSprite2D;
 
     private CollisionShape2D _collisionShape2D;
+
+    private Vector2 _startPosition;
     #endregion
 
 
@@ -56,6 +58,9 @@ public partial class PlayerArea2d : Area2D
 			_animatedSprite2D.Stop();
 
     }
+
+    public void SetStartPosition(Vector2 positon) =>
+        _startPosition = Position;
 
     public void Start(Vector2 positon)
     {
